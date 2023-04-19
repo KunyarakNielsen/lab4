@@ -119,8 +119,8 @@ int main(void)
   HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2);
 
   PID.Kp = 0.55;
-  PID.Ki = 0;
-  PID.Kd = 0;
+  PID.Ki = 0.01;
+  PID.Kd = 0.5;
   arm_pid_init_f32(&PID,0);
 
   /* USER CODE END 2 */
